@@ -1,14 +1,9 @@
 
-exports.apimodules = function(app){
+exports.apimodules = function(app, reservations){
 
-	app.post('/api/tables', function(req, res){
-		/*var newWait = req.body;
+	app.get('/api/tables', function(req, res){
 
-		console.log(newWait);
 
-		waitList.push(newWait);
-
-		res.json(newWait);*/
 
 	});
 
