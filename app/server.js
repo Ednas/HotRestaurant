@@ -10,84 +10,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
-var reservations = [
 
-{
-	tableNumber: 1,
-	name: "",
-	phoneNumber: "",
-	email: ""
+// require our waiting list and reservations arrays
+require('./data/table-data.js');
 
-},
-
-{
-	tableNumber: 2,
-	name: "",
-	phoneNumber: "",
-	email: ""
-
-},
-{
-	tableNumber: 3,
-	name: "",
-	phoneNumber: "",
-	email: ""
-
-},
-{
-	tableNumber: 4,
-	name: "",
-	phoneNumber: "",
-	email: ""
-
-},
-{
-	tableNumber: 5,
-	name: "",
-	phoneNumber: "",
-	email: ""
-
-}
-];
-
-var waitList = [
-{
-	waitNumber: 1,
-	name: "",
-	phoneNumber: "",
-	email: ""
-
-},
-
-{
-	waitNumber: 2,
-	name: "",
-	phoneNumber: "",
-	email: ""
-
-},
-{
-	waitNumber: 3,
-	name: "",
-	phoneNumber: "",
-	email: ""
-
-},
-{
-	waitNumber: 4,
-	name: "",
-	phoneNumber: "",
-	email: ""
-
-},
-{
-	waitNumber: 5,
-	name: "",
-	phoneNumber: "",
-	email: ""
-
-}
-];
+require('./data/waitinglist-data.js');
 
 //require html-routes
 
