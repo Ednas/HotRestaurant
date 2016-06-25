@@ -12,7 +12,7 @@
 	<link type="text/css" rel="stylesheet" href="external_platforms/normalize.css">
 	<!-- Materialize CSS -->
 	<link type="text/css" rel="stylesheet" href="external_platforms/materialize/css/materialize.min.css"  media="screen,projection"/>
-	<link rel="stylesheet" type="text/css" href="Assets/Style.css">
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
 
 </head>
 <body>
@@ -22,7 +22,7 @@
 		<h1>Hot Restaurant</h1>
 	</div>
 	<div class="col s12 m12 l12 hotMessage">
-		<p>Make your reservation now!</p>
+		<p> <h5> Make your reservation now! </h5> </p>
 	</div>
 	<div class="col s12 m12 l12 hotButtons">
 		<a href="tables.html"> <button class="waves-effect waves-light btn light-blue lighten-2">View Tables</button> </a> 
@@ -42,11 +42,17 @@
 
 		<input class="col s12 m12 l12 resForm getID" value="Unique ID">
 
-		<input type="submit" class="btn" value="Submit Reservation">
+		<input type="submit" class="btn submitRes" value="Submit Reservation">
+			<script type="text/javascript">
+				$("submitRes").on("click", function() {
+					return false;
+				})
+			</script>
+
 	</form>
 </div>
 
-<footer>Hot Restaurant by Erik H., Ibrahim M., Edna N., Crystal W., Susan H.</footer>
+<footer> <strong> <span style="color: red;"> Hot Restaurant </span> by Erik H., Ibrahim M., Edna N., Crystal W., Susan H. </strong> </footer>
 
 </body>
 </html>
