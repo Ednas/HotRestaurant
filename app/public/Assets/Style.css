@@ -9,7 +9,12 @@ h1, h2, h3, h4,h5, h6 {
 	padding: 0;
 }
 
+.submitRes, .resButton, .homeButton, .tableButton {
+	color: black;
+}
+
 .jumboTron {
+	margin-top: 20px;
 	text-align: center;
 	background-color: #eeeeee;
 	border-radius: 10px;
