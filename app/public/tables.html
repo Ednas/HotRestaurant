@@ -24,9 +24,7 @@
 
 				method: 'GET',
 				url: '/api/tables',
-				//url: 'table-data.js',
 				dataType: 'json'
-
 
 			}).done(function(retrieved){
 
@@ -34,17 +32,26 @@
 
 					//$('.addRes').append(i);
 
-					if(retrieved[i].reserved == false){
+					if(retrieved[i].reserved != false){
 
 						$('.addRes').append("<p>" + retrieved[i].tableNumber + " " + retrieved[i].name + "</p>");
 					}
 				}
 
-				//$('.addRes').html("table number: " +retrieved[0].tableNumber);
+			});
 
-				//alert(retrieved);
+			$.ajax({
+				method: 'GET',
+				url: '/api/waitlist',
+				dataType: 'json'
+			}).done(function(retrieved){
 
-				//$('.addRes').append("table number: " +retrieved[0].tableNumber);
+				for(var i=0; i < retrieved.length; i++){
+
+					$('.addWait').append("<p>" + retrieved[i].waitNumber + " " + retrieved[i].name + " " + retrieved[i].phoneNumber + "</p>");
+
+				}
+
 			});
 
 		});
