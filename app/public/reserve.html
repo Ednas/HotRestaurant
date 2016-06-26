@@ -14,8 +14,75 @@
 	<link type="text/css" rel="stylesheet" href="external_platforms/materialize/css/materialize.min.css"  media="screen,projection"/>
 	<link rel="stylesheet" type="text/css" href="assets/style.css">
 
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+
+
 </head>
 <body>
+
+<script type="text/javascript">
+		
+
+
+			function success(){
+
+				alert("Reservation processed.");
+			}
+
+			var newReservation = {
+
+				name: $('#name').val();
+				email: $('#email').val();
+				phoneNumber: $('#phoneNumber').val();
+				id: $('#id').val();
+			};
+
+
+			$(".submitRes").on("click", function() {
+
+				//var formData = $('#newReserve').serialize();
+
+				var currentURL = window.location.origin;
+
+				//$.post('api/tables', formData, function(data){
+				$.post(currentURL + 'api/tables', newReservation, function(data){	
+
+					alert(formData);
+
+					alert("Reservation processed.");
+
+					console.log(data);
+
+				});
+
+				return false;
+
+				/*$.ajax({
+					method: 'POST',
+					url: 'api/tables',
+					dataType: 'json',
+					data: formData,
+					success: success 
+					//data: {name: , phoneNumber: , email:, uniID:}
+
+				}).done(function(retrieved){
+
+					alert(formData);
+
+					alert("Reservation processed.");
+
+					console.log(retrieved);
+				});*/
+
+
+			});
+
+
+
+
+
+	</script>
 
 <div class="row jumboTron">
 	<div class="col s12 m12 l12 hotName">
@@ -33,21 +100,20 @@
 <!-- Make Reservation -->
 
 <div class="row newReservation">
-	<form>
-		<input class="col s12 m12 l12 resForm getName" value="Name">
+	<form id="newReserve" name="newReserve">
+		<input class="col s12 m12 l12 resForm getName" id="name" name="name" value="Name">
 
-		<input class="col s12 m12 l12 resForm getNumber" value="Number">
+		<input class="col s12 m12 l12 resForm getNumber" id="phoneNumber" name="phoneNumber" value="Number">
 
-		<input class="col s12 m12 l12 resForm getEmail" value="Email">
+		<input class="col s12 m12 l12 resForm getEmail" id="email" name="email" value="Email">
 
-		<input class="col s12 m12 l12 resForm getID" value="Unique ID">
+		<input class="col s12 m12 l12 resForm getID" id="id" name="id" value="Unique ID">
+
+		<input type="hidden" name="reserved" id="reserved" value="true">
 
 		<input type="submit" class="btn submitRes" value="Submit Reservation">
-			<script type="text/javascript">
-				$("submitRes").on("click", function() {
-					return false;
-				})
-			</script>
+
+
 
 	</form>
 </div>
@@ -56,3 +122,4 @@
 
 </body>
 </html>
+

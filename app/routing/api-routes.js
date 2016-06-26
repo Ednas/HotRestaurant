@@ -22,7 +22,7 @@ exports.apimodules = function(app, tableData, waitListData){
 			if(reservations[i].reserved == false){
 
 				tableData.push(req.body);
-				return res.json(true);;
+				return res.json(true);
 
 			}
 

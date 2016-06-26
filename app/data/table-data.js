@@ -6,6 +6,7 @@ exports.table_reservations = [
 	name: "",
 	phoneNumber: "",
 	email: "",
+	id: "",
 	reserved: false
 
 },
@@ -15,6 +16,7 @@ exports.table_reservations = [
 	name: "",
 	phoneNumber: "",
 	email: "",
+	id: "",	
 	reserved: false
 
 },
@@ -23,6 +25,7 @@ exports.table_reservations = [
 	name: "",
 	phoneNumber: "",
 	email: "",
+	id: "",	
 	reserved: false
 
 },
@@ -31,6 +34,7 @@ exports.table_reservations = [
 	name: "",
 	phoneNumber: "",
 	email: "",
+	id: "",	
 	reserved: false	
 
 },
@@ -39,6 +43,7 @@ exports.table_reservations = [
 	name: "",
 	phoneNumber: "",
 	email: "",
+	id: "",
 	reserved: false
 
 }
