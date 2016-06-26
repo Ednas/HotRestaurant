@@ -1,5 +1,6 @@
-exports.table_reservations = [
 
+exports.table_reservations = [
+//var table_reservations = [
 {
 	tableNumber: 1,
 	name: "",
@@ -42,3 +43,5 @@ exports.table_reservations = [
 
 }
 ];
+
+//module.exports = table_reservations;
