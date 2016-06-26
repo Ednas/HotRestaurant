@@ -25,8 +25,8 @@
 		<p> <h5> Make your reservation now! </h5> </p>
 	</div>
 	<div class="col s12 m12 l12 hotButtons">
-		<a href="tables.html"> <button class="waves-effect waves-light btn light-blue lighten-2">View Tables</button> </a> 
-		<a href="home.html"> <button class="waves-effect waves-light btn yellow">Home</button> </a>
+		<a href="tables.html"> <button class="waves-effect waves-light btn light-blue lighten-2 tableButton">View Tables</button> </a> 
+		<a href="home.html"> <button class="waves-effect waves-light btn yellow homeButton">Home</button> </a>
 	</div>
 </div>
 
@@ -42,9 +42,9 @@
 
 		<input class="col s12 m12 l12 resForm getID" value="Unique ID">
 
-		<input type="submit" class="btn submitRes" value="Submit Reservation">
+		<input type="submit" class="btn light-blue lighten-2 submitRes" value="Submit Reservation">
 			<script type="text/javascript">
-				$("submitRes").on("click", function() {
+				$(".submitRes").on("click", function() {
 					return false;
 				})
 			</script>
