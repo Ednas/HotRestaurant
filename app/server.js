@@ -12,9 +12,11 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 
 // require our waiting list and reservations arrays
-require('./data/table-data.js');
+var tableData = require('./data/table-data.js').table_reservations;
 
-require('./data/waitinglist-data.js');
+var waitListData = require('./data/waitinglist-data.js').waitList;
+
+
 
 //require html-routes
 
@@ -22,7 +24,7 @@ require('./data/waitinglist-data.js');
 
 require('./routing/html-routes.js')(app);
 
-require('./routing/api-routes.js').apimodules(app);
+require('./routing/api-routes.js').apimodules(app, tableData, waitListData);
 
 
 
