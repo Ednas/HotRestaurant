@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	|<title>Hot Restaurant | View Reservations</title>
+	<title>Hot Restaurant | View Reservations</title>
 
 	<!-- JQuery Link -->
 	<script src="external_platforms/jquery-2.2.3.min.js" ></script>
@@ -13,6 +13,32 @@
 	<!-- Materialize CSS -->
 	<link type="text/css" rel="stylesheet" href="external_platforms/materialize/css/materialize.min.css"  media="screen,projection"/>
 	<link rel="stylesheet" type="text/css" href="Assets/Style.css">
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js">
+		
+		$(document).ready(function(){
+
+			$.ajax({
+
+				method: 'GET',
+				url: '/api/tables'
+
+			}).done(function(retrieved){
+
+				$('.addRes').html(retrieved);
+			});
+
+		});
+
+
+	</script>
+
+	<style type="text/css">
+		
+		.addRes {border: 1px solid #000;
+				 width: 50%;}
+	</style>
 
 </head>
 <body>
@@ -39,7 +65,9 @@
 		<h4>Existing Reservations</h4> <br>
 
 		<div class="row">
-			<div class="col s12 m12 l12 addRes"></div>
+			<div class="col s12 m12 l12 addRes">
+				blah
+			</div>
 		</div>
 
 		<div></div>
