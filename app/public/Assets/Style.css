@@ -1,1 +1,35 @@
-Style.css
+body {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1, h2, h3, h4,h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+.jumboTron {
+	text-align: center;
+	background-color: #eeeeee;
+	border-radius: 10px;
+}
+
+.hotName {
+	margin-top: 35px;
+}
+
+.hotButtons {
+	margin-top: 20px;
+	margin-bottom: 35px;
+}
+
+.newReservation {
+	width: 90%;
+}
+
+footer {
+	text-align: center;
+	color: #eeeeee;
+	background-color: #212121;
+}
